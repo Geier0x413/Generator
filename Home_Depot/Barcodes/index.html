@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" >
+    <title>Barcodes</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="barcode.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="barcode_wrapper">
+      <select class="barcode_type" id="type">
+        <option value="option" disabled selected>&nbsp;-- Option --&nbsp;</option>
+        <option value="bay">Bay Tag</option>
+        <option value="pallet">Pallet Tag</option>
+      </select>
+      <div class="barcode_info">
+        <svg class="barcode" id="barcode"></svg>
+        <div class="aisle_bay_info hidden">
+          <input class="aisle" id="aisle" name="aisle" max="2" placeholder="Aisle" type="text">
+          <input class="bay" id="bay" name="bay" max="3" placeholder="Bay" type="text">
+        </div>
+        <div class="pallet_info hidden">
+          <input class="pallet" id="pallet" name="pallet" max="5" placeholder="Pallet" type="text">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

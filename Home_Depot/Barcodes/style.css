@@ -1,0 +1,85 @@
+:root {
+  --black: rgba( 0 , 0 , 0 , 1 );
+  --grey: rgba( 64 , 64 , 64 , 1 );
+  --white: rgba( 255 , 255 , 255 , 1 );
+}
+
+body , html {
+  align-items: flex-start;
+  background: var( --white );
+  color: rgba( 0 , 0 , 0 , 1 );
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100vw;
+}
+
+.hidden { display: none !important; }
+
+.barcode_wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  .barcode_type  {
+    appearance: none;
+    background: var( --white );
+    border: none;
+    box-shadow: 0 4px 4px var( --grey );
+    color: var( --grey );
+    font-size: 1.8rem;
+    height: auto;
+    margin: 8px 0;
+    outline: none;
+    padding: 0;
+    text-align: center;
+  }
+
+  .barcode_info {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .aisle_bay_info , .pallet_info {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      position: fixed;
+
+      input {
+        background:  var( --white );
+        border: none;
+        box-shadow: inset 0 -4px 8px var( --grey );
+        color: var( --grey );
+        font-size: 1.8rem;
+        outline: none;
+        padding: 0 8px;
+        text-align: center;
+      }
+
+      input::placeholder { color: var( --grey ) }
+
+      input::selection { background: none; }
+
+      .aisle, .bay {
+        margin: 0 4px;
+        width: 64px;
+      }
+
+      .pallet {
+        width: 128px;
+      }
+    }
+  }
+
+  .barcode {
+    width: 100vw;
+  }
+}
