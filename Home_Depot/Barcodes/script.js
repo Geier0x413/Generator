@@ -90,7 +90,7 @@ input.type.addEventListener( "change" , function() {
     }
   } );
 
-  field.addEventListener( "click" , function() {
+  field.addEventListener( "focus" , function() {
     this.name = this.name.toLowerCase();
     this.shadowValue = "";
     this.value = "";
