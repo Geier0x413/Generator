@@ -1,0 +1,62 @@
+:root {
+  --black: 0 , 0 , 0;
+  --grey: 64 , 64 , 64;
+  --white: 255 , 255 , 255;
+}
+
+body , html {
+  align-items: center;
+  background: rgba( var( --white ) , 1 );
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-start;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.info {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  input {
+    appearance: none;
+    background: rgba( var( --white ) , 1 );
+    border: none;
+    box-shadow: 0 4px 4px rgba( var( --grey ) , 1 );
+    color: rgba( var( --grey ) , 1 );
+    font-size: 1.8rem;
+    height: 32px;
+    margin: 8px;
+    outline: none;
+    padding: 0;
+    text-align: center;
+    width: 64px;
+  }
+}
+
+grid {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  padding: 8px;
+  width: 100vw;
+
+  cell {
+    height: 100%;
+    width: 100%;
+  }
+
+  cell[ selected ] {
+    background: rgba( var( --grey ) , 1 );
+    box-shadow: inset 0 0 8px rgba( var( --white ) , 1 );
+  }
+}
