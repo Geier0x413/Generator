@@ -1,16 +1,14 @@
 const grid = document.querySelector( "grid" );
 const input = {
   "column": document.querySelector( "#column" ),
-  "row": document.querySelector( "#row" ),
-  "sequence": document.querySelector( "#sequence" )
+  "row": document.querySelector( "#row" )
 };
 
 function matrix() {
   const col = input.column.value;
   const row= input.row.value;
-  const seq = input.sequence.value;
 
-  if ( !col || !row || !seq ) return;
+  if ( !col || !row ) return;
 
   grid.innerHTML = "";
   grid.style.gridTemplateColumns = "auto ".repeat( col );
@@ -18,14 +16,16 @@ function matrix() {
 
   for ( let i = 0; i < ( col * row ); i++ ) {
     const cell = document.createElement( "cell" );
+    const text = document.createElement( "text" );
 
-    if ( i + 1 == seq ) cell.setAttribute( "selected" , "" );
+    text.textContent = i + 1;
 
+    cell.append( text );
     grid.append( cell );
   }
 }
 
-[ input.column , input.row , input.sequence ].forEach( function( field ) {
+[ input.column , input.row ].forEach( function( field ) {
   field.addEventListener( "input" , function( event ) {
     this.name = this.name.toLowerCase();
 
